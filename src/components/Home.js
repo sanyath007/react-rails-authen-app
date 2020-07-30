@@ -21,7 +21,7 @@ export default class Home extends Component {
       <div>
         <h1>Home</h1><br/>
         <p>Status: {this.props.loggedInStatus}</p>
-
+        
         <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} /><br/>
 
         <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
