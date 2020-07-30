@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Registration from './auth/Registration'
+import Login from './auth/Login'
 
 export default class Home extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ export default class Home extends Component {
   }
 
   handleSuccessfulAuth(data) {
-    // TODO update parent component
+    // update parent component
     this.props.handleLogin(data);
     // Redirect to /dashboard
     this.props.history.push("/dashboard");
@@ -21,7 +22,9 @@ export default class Home extends Component {
         <h1>Home</h1><br/>
         <p>Status: {this.props.loggedInStatus}</p>
 
-        <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} /><br/>
+
+        <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
       </div>
     )
   }
